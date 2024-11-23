@@ -13,6 +13,28 @@ public class Point { // point is an object (coords) Each point has its own varia
     public Point translateY(double t){
         return new Point(x,y+t);
     }
+    public static Point centerOfMass(Point[] points) { // Practice: Center of Mass(1)
+        double eks=0, why=0;
+        for(int i=0;i<points.length;i++){
+            eks+= points[i].x;
+            why+= points[i].y;
+        }
+        eks = eks/points.length;
+        why = why/points.length;
+        return new Point(eks,why);
+    }//(1)
+
+    public double angle(){ // Practice: Angle(2)
+        double x = this.x, y =this.y;
+        double angleMeasurement = Math.atan2(y,x);
+        angleMeasurement = Math.toDegrees(angleMeasurement);
+        return angleMeasurement;
+    }//(2)
+
+    public Point rotate90(){ // Challenge: Rotation (1C)
+        
+    }//(1C)
+
     @Override // overrides everything
     public String toString(){ // overrides method into string
         return "(" + x + "," + y + ")";

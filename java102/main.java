@@ -4,13 +4,16 @@ public class main {
     Point yTranslation = point.translateY(-7); // should be (4, -4)
     Point xyTranslation = point.translateX(-4).translateY(-3); // should be (0, 0)
     public main() { //make "main"
-        Point a= new Point(4, 5);
+        Point a= new Point(0, 1);
         Point b= new Point (6,4);
+        Point[] points={a,b};
         System.out.println("x: "+ point.x+" y: "+ point.y);
         System.out.println("x transl: " + xTranslation);
         System.out.println("y transl: " + yTranslation);
         System.out.println("xy transl: " + xyTranslation);
         System.out.println(Point.distance(a, b));
+        System.out.println(Point.centerOfMass(points)); //Practice(1)
+        System.out.println(a.angle()); //Practice(2)
     }
     public static void main(String[] args){
         new main(); // triggers "main"
