@@ -32,8 +32,18 @@ public class Point { // point is an object (coords) Each point has its own varia
     }//(2)
 
     public Point rotate90(){ // Challenge: Rotation (1C)
-        
-    }//(1C)
+        double x = this.x, y = this.y;
+        return new Point(0-y, x);
+    }
+    public Point rotate(double theta){ //Challenge: Rotation (1C)
+        double x = this.x, y=this.y;
+        double radians = Math.toRadians(theta);
+        double cos = Math.cos(radians);
+        double sin = Math.sin(radians);
+        double newX=x*cos-y*sin;
+        double newY= x*sin + x*cos;
+        return new Point(newX, newY);
+    } //(1C)
 
     @Override // overrides everything
     public String toString(){ // overrides method into string

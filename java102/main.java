@@ -14,6 +14,9 @@ public class main {
         System.out.println(Point.distance(a, b));
         System.out.println(Point.centerOfMass(points)); //Practice(1)
         System.out.println(a.angle()); //Practice(2)
+        System.out.println(a.rotate90()); //Challenge(1)
+        System.out.println(a.rotate(90));//Challenge(1)
+        ArrayList<String> arr = new ArrayList<>();
     }
     public static void main(String[] args){
         new main(); // triggers "main"
